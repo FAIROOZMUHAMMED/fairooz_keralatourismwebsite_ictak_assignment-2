@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kozhikode</title>
+    <link rel="icon" href="logo.png" type="image/gif" sizes="32x32">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" alt="" width="100" height="65" class="d-inline-block align-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../intex.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active"  aria-current="page" href="../districts.html">Districts</a>
+            </li>
+           <!-- Login -->
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Login
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg-end" style="width:max-content">
+              <form class="px-4 py-3 " action="../intex.html"  onsubmit='return !! (validatelogin() & loginvalidatepassword());'>
+                <div class="mb-0">
+                  <input type="email" class="form-control" id="loginemail" placeholder="Email">
+                </div>
+                <label for="errorEmail" id="loginerrorEmail"></label>
+
+                <div class="mb-2">
+                  <input type="password" class="form-control" id="loginpassword" placeholder="Password" onchange="return loginvalidatepassword()">
+                </div>
+                <label for="loginpasserror" id="loginpasserror"></label>
+                <div class="mb-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                    <label class="form-check-label" for="dropdownCheck">
+                      Remember Password
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-success" style="width: 100%;">Login</button>
+              </form>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Forgot password?</a>
+            </div>
+          </li>
+          <!-- /Login -->
+          <!-- sign up -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sign up
+            </a>
+            <div class="dropdown-menu" style="width:max-content">
+              <form class="px-4 py-4 " action="../intex.html" onsubmit='return !! (validate1() & phonenumber(phn) & validatepassword() & confirmpassword());'>  
+
+                <div class="mb-0">
+                  <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <label for="errorEmail" id="errorEmail"></label>
+                
+                <div class="mb-0">
+                  <input type="tel" class="form-control" id="phn" placeholder="Phone Number">
+                </div>                  
+                <label for="error2" id="error2"></label>
+
+                <input type="password" onkeyup="return validatepassword();" class="form-control" id="password" placeholder="Password" title="Must contain at least one number and one uppercase and lowercase letter and special chara and atleast 8 character">
+                <small  class="form-text" id="passerror" style="color: red;"> (Must contain at least one number <br> one uppercase and lowercase and</br> special chara atleast 8 or more character) </small>
+                <div class="mb-2">
+                  <input type="password" class="form-control" onchange="return confirmpassword()" id="confirmPassword" placeholder="Confirm Password">
+                </div>
+                <small  class="form-text" id="errpwd"></small>
+                <div class="mb-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                    <label class="form-check-label" for="dropdownCheck">
+                      I agree <a id="terms" href="#">Terms & Conditions</a>
+                    </label>                     
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-success" style="width: 100%;">Sign up</button>
+              </form>
+          </li>
+          <!-- sign up -->
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!-- Navbar -->
+    <!-- header -->
+    <header>
+      <h2>Kozhikode</h2>
+    </header>
+    <!-- /header -->
+   <!-- body -->
+   <div class="background-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="con-text p-5" >
+            <p>
+              The legendary seaport where Arab, Chinese and East African traders once converged, Kozhikode was previously the most crucial region of the Malabar Coast. Vasco da Gama landed on its shores in 1498, shooting the region to global fame. Once the capital of the influential Zamorins and a prominent trade and commerce centre, the winds of change have swept over this charming coastal land. The whiff of history continues to permeate the lanes, bazaars and business hubs of Kozhikode. Lush green countryside, serene beaches, historic sites, wildlife sanctuaries, rivers and hills make Kozhikode a popular destination.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-5">
+            <img src="../districts/imgs/Mananchira Square.jpg" class="w-100 con-image pt-5"  >
+        </div>
+      </div>
+    </div>
+   
+   
+    <h3 class="text-center"> Places to visit</h3>
+
+  <div class="row row-cols-1 row-cols-md-4 g-3  district-card">        
+    <div class="col">
+      <div class="card h-100">
+        <div class="img-section">
+          <img src="../districts/imgs/Kozhippara Falls.jpg" alt="Avatar" class="image">
+        
+        </div>
+        <div class="card-body bg-dark">
+          <p class="text-white text-center">Kozhippara Falls</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <div class="img-section">
+          <img src="../districts/imgs/Mananchira Square.jpg" alt="Avatar" class="image">
+        
+        </div>
+        <div class="card-body bg-dark">
+          <p class="text-white text-center">Mananchira Square</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <div class="img-section">
+          <img src="../districts/imgs/Pazhassi Raja Museum And Art Gallery.jpg" alt="Avatar" class="image">
+        
+        </div>
+        <div class="card-body bg-dark">
+          <p class="text-white text-center">Pazhassi Raja Museum And Art Gallery</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <div class="img-section">
+          <img src="../districts/imgs/Kozhikode Beach.jpg" alt="Avatar" class="image">
+        
+        </div>
+        <div class="card-body bg-dark">
+          <p class="text-white text-center">Kozhikode Beach</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    
+
+
+
+
+    
+     <!-- Footer -->
+   <footer > 
+      <p>  Toll free No: 1-800-425-4747 (Within India only) |
+          Department of Tourism, Government of Kerala, Park View, Thiruvananthapuram, Kerala, India - 695 033 |
+          Phone: +91 471 2321132, Fax: +91 471 2322279, E-mail: info@keralatourism.org. |
+          All rights reserved © Kerala Tourism 2021. Copyright | Terms of Use | Cookie Policy | Contact Us.|
+          Developed & Maintained by Invis Multimedia.
+      </p>
+    </footer>
+    <!-- /Footer -->
+  </div>
+          <!-- /body -->   
+   <script src="../validation.js"></script>
+    
+
+</body>
+</html>
